@@ -1,0 +1,5 @@
+gateway:
+  route:
+    redirect:
+      https://gateway.local.pcfdev.io/a: https://service-a.local.pcfdev.io/
+      https://gateway.local.pcfdev.io/b: https://service-b.local.pcfdev.io/

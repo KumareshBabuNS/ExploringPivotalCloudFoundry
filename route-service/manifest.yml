@@ -1,0 +1,8 @@
+---
+applications:
+- name: route-service
+  memory: 512M
+  instances: 1
+  random-route: true
+  path: build/libs/route.war
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git

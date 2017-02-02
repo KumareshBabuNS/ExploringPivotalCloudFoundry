@@ -1,6 +1,4 @@
-# Exploring Pivotal Cloud Foundry
-
-Links: 
+# Exploring Pivotal Cloud Foundry 
 
   - https://docs.cloudfoundry.org/
 
@@ -8,8 +6,13 @@ Links:
 
 1. Installation guide
 
-    - https://docs.pivotal.io/pivotalcf/1-9/installing/
+  - https://docs.pivotal.io/pivotalcf/1-9/installing/
     
+2. Local development UI
+
+  - https://console.local.pcfdev.io/
+    
+    Login credentials: user/pass
     
 # Applications
 
@@ -30,14 +33,25 @@ Links:
 3. Remote debug to _localhost_ at _8000_
 
 
-## Application Manifest
+## Push app to PCF
 
-  - https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html
+    cf push --hostname <app-name>
     
+
+# Service Gateway
+
+  - https://content.pivotal.io/blog/creating-a-service-gateway-in-cloud-foundry-part-1
+  - https://content.pivotal.io/blog/creating-a-service-gateway-in-cloud-foundry-part-2
+
+# Route service
+    
+  - http://docs.pivotal.io/pivotalcf/1-9/services/route-services.html
+  - https://docs.pivotal.io/pivotalcf/1-7/devguide/services/route-binding.html
     
     
 # Useful links
 
+  - [Manifest.yml](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html)
   - https://docs.cloudfoundry.org/buildpacks/java/java-tips.html#servlet-gradle/ 
   - https://docs.cloudfoundry.org/buildpacks/java/spring-service-bindings.html
   - [Service Registry](http://docs.pivotal.io/spring-cloud-services/1-3/service-registry/resources.html)

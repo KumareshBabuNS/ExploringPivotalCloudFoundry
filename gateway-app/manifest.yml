@@ -1,0 +1,8 @@
+---
+applications:
+- name: gateway
+  memory: 512M
+  instances: 1
+  random-route: true
+  path: build/libs/gateway-app.war
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git

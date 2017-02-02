@@ -13,7 +13,7 @@ buildscript {
 }
 
 version = "0.0.1"
-group = 'com.servicea'
+group = 'com.route'
 description = 'Spring Boot based application'
 
 
@@ -25,12 +25,12 @@ repositories {
 dependencies {
     compile ("org.springframework.boot:spring-boot-starter-web:$spring_boot_version")
     compile "org.springframework.boot:spring-boot-starter-actuator:$spring_boot_version"
-    compile "org.springframework.security:spring-security-config:$spring_security"
-    compile "org.springframework.security:spring-security-web:$spring_security"
     compile 'org.slf4j:slf4j-api:1.7.21'
 
     providedCompile "javax.servlet:javax.servlet-api:$servlet_api_version"
 
+
+    testCompile "org.springframework.boot:spring-boot-starter-test:$spring_boot_version"
     testCompile 'junit:junit:4.12'
 }
 
@@ -38,7 +38,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 bootRepackage {
-    classifier = 'service'
+    classifier = 'route'
 }
 
 
@@ -52,6 +52,6 @@ war {
     manifest = project.manifest {
         from getSharedManifest()
     }
-    baseName = "service-a"
+    baseName = "route"
     version = "" // omit the version from the war file name
 }

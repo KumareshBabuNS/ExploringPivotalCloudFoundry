@@ -1,0 +1,8 @@
+---
+applications:
+- name: service-a
+  memory: 512M
+  random-route: true
+  path: build/libs/service-a.war
+env:
+ JBP_CONFIG_DEBUG: '{enabled: true}'

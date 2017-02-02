@@ -1,0 +1,4 @@
+gateway:
+  route:
+    redirect:
+      http://localhost/forward/get: http://localhost/redirect/get
