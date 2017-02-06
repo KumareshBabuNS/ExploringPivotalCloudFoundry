@@ -1,0 +1,10 @@
+---
+applications:
+- name: portal
+  memory: 1024M
+  instances: 1
+  random-route: true
+  path: portal.war
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+env:
+  SIG_SECRET_KEY: JWTSecretKeyDontUseInProduction!

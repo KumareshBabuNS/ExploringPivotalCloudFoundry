@@ -28,8 +28,6 @@ public class RouteController {
 
     static final String PROXY_SIGNATURE = "X-CF-Proxy-Signature";
 
-    static final String SKIP_ROUTING_SERVICE = "X-SKIP_ROUTING_SERVICE";
-
     private static final Logger logger = LoggerFactory.getLogger(RouteController.class);
 
     private final RestOperations restOperations;

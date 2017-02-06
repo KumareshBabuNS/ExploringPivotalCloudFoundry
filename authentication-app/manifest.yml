@@ -1,0 +1,15 @@
+---
+applications:
+- name: auth
+  memory: 768M
+  instances: 1
+  random-route: true
+  path: ldap-b0.war
+#  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+env:
+  SIG_SECRET_KEY: JWTSecretKeyDontUseInProduction!
+  EXTERNAL_SIG_SECRET_KEY: JWTExtSecKeyDontUseInProduction!
+  EXTERNAL_ENC_SECRET_KEY: JWTExtEncKeyDontUseInProduction!
+  registry:
+    client:
+      serviceUrl: defaultZone=http://registry-service.local.pcfdev.io/eureka/

@@ -1,0 +1,53 @@
+server:
+  port: 7777
+  contextPath: /gateway
+#  ssl:
+#    key-store: ../dev/keystore/gateway.jks
+#    key-alias: gateway
+#    key-store-password: GatewayKeystoreDontUseInProduction!
+#    key-password: gateway
+#
+#token:
+#  converter:
+#    type: SERVICE
+
+registry:
+  enable: true
+  instance:
+#    ipAddress: 127.0.0.1
+    nonSecurePort: 7777
+    leaseRenewalIntervalInSeconds: 5
+  client:
+    serviceUrl: defaultZone=http://registry-service.local.pcfdev.io/eureka/
+
+
+gateway:
+  envrole: editorial
+  correlationIdType: counter
+  services:
+    auth:
+      host: http://auth.local.pcfdev.io
+    servicea:
+      host: http://service-a.local.pcfdev.io
+    serviceb:
+      host: http://service-b.local.pcfdev.io
+    portal:
+      host: http://portal.local.pcfdev.io
+
+sso:
+  jwt:
+    internal:
+      type: signed
+      signature:
+        key:
+          type: ENV
+          value: SIG_SECRET_KEY
+    external:
+      signature:
+        key:
+          type: ENV
+          value: EXTERNAL_SIG_SECRET_KEY
+      encryption:
+        key:
+          type: ENV
+          value: EXTERNAL_ENC_SECRET_KEY
