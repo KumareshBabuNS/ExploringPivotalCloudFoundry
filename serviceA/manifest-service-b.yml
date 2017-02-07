@@ -1,7 +1,7 @@
 ---
 applications:
 - name: service-b
-  memory: 512M
+  memory: 1024M
   random-route: true
   path: build/libs/service-a.war
 env:

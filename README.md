@@ -55,5 +55,7 @@
   - https://docs.cloudfoundry.org/buildpacks/java/java-tips.html#servlet-gradle/ 
   - https://docs.cloudfoundry.org/buildpacks/java/spring-service-bindings.html
   - [Service Registry](http://docs.pivotal.io/spring-cloud-services/1-3/service-registry/resources.html)
+  - https://content.pivotal.io/blog/now-available-spring-cloud-services-for-pivotal-cloud-foundry
+  - http://docs.pivotal.io/spring-cloud-services/1-3/service-registry/writing-client-applications.html
   - [Microservice Registration and Discovery with Spring Cloud and Netflix's Eureka](https://spring.io/blog/2015/01/20/microservice-registration-and-discovery-with-spring-cloud-and-netflix-s-eureka)  
   - http://docs.pivotal.io/pivotalcf/1-9/devguide/services/user-provided.html

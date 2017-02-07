@@ -1,8 +1,8 @@
 ---
 applications:
 - name: registry
-  memory: 512M
+  memory: 768M
   instances: 1
   random-route: true
   path: registry.war
-#  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git

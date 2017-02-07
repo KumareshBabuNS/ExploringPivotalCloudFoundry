@@ -1,16 +1,21 @@
-apply plugin: 'java'
-apply plugin: 'war'
-apply plugin: 'spring-boot'
-
 buildscript {
     repositories {
         mavenCentral()
         jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
     }
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:$spring_boot_version"
+        classpath 'net.linguica.gradle:maven-settings-plugin:0.5'
     }
 }
+apply plugin: 'net.linguica.maven-settings'
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'spring-boot'
+
 
 version = "0.0.1"
 group = 'com.servicea'
@@ -20,9 +25,15 @@ description = 'Spring Boot based application'
 repositories {
     jcenter()
     mavenCentral()
+    maven {
+        name = 'artifacts_backbase_com'
+        url = 'http://artifacts.backbase.com/backbase-development-rc-releases/'
+    }
 }
 
 dependencies {
+    compile "com.backbase.buildingblocks:registry-client:+"
+
     compile ("org.springframework.boot:spring-boot-starter-web:$spring_boot_version")
     compile "org.springframework.boot:spring-boot-starter-actuator:$spring_boot_version"
     compile "org.springframework.security:spring-security-config:$spring_security"

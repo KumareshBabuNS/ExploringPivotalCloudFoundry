@@ -1,3 +1,9 @@
-spring:
-  application:
-    name: service-a
+registry:
+  instance:
+    appname: service-a
+    preferIpAddress: false
+    hostname: service-a.local.pcfdev.io
+    nonSecurePort: 80
+    leaseRenewalIntervalInSeconds: 5
+  client:
+    serviceUrl: defaultZone=${vcap.services.registry-service.credentials.uri}/eureka/
