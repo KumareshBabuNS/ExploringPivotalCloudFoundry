@@ -5,7 +5,7 @@ applications:
   instances: 1
   random-route: true
   path: ldap-b0.war
-#  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
 env:
   JBP_CONFIG_DEBUG: '{enabled: true}'
   SIG_SECRET_KEY: JWTSecretKeyDontUseInProduction!

@@ -4,6 +4,7 @@ applications:
   memory: 1024M
   random-route: true
   path: build/libs/service-a.war
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
 env:
  JBP_CONFIG_DEBUG: '{enabled: true}'
  SIG_SECRET_KEY: JWTSecretKeyDontUseInProduction!

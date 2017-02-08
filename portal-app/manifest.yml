@@ -1,10 +1,25 @@
 ---
 applications:
 - name: portal
-  memory: 1024M
+  memory: 1G
+  disk_quota: 300M
   instances: 1
   random-route: true
   path: portal.war
   buildpack: https://github.com/cloudfoundry/java-buildpack.git
 env:
+  JBP_CONFIG_DEBUG: '{enabled: true}'
   SIG_SECRET_KEY: JWTSecretKeyDontUseInProduction!
+  BACKBASE_ENVROLE: editorial
+  BACKBASE_DBTYPE: mysql
+  NET_SF_EHCACHE_DISABLED: true
+  AUDITING_ENABLED: false
+  PORTAL_FILESYSTEM_CONTEXTROOT: ./fs_contextroot
+  REGISTRY_INSTANCE_PREFERIPADDRESS: FALSE
+  REGISTRY_INSTANCE_HOSTNAME: portal.local.pcfdev.io
+  REGISTRY_INSTANCE_NONSECUREPORT: 80
+  REGISTRY_INSTANCE_LEASERENEWALINTERVALINSECONDS: 5
+  REGISTRY_CLIENT_SERVICEURL: defaultZone=${vcap.services.registry-service.credentials.uri}/eureka/
+services:
+ - registry-service
+ - portal_mysql

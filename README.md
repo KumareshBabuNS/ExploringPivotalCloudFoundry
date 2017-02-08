@@ -1,6 +1,8 @@
 # Exploring Pivotal Cloud Foundry 
 
-  - https://docs.cloudfoundry.org/
+  - [Pivotal Cloud Foundry](https://pivotal.io/platform) 
+  - [Pivotal Cloud Foundry Documentation](https://docs.pivotal.io/pivotalcf/1-9/installing/pcf-docs.html) 
+  - [Cloud Foundry](https://docs.cloudfoundry.org/)
 
 
 
@@ -14,9 +16,9 @@
     
     Login credentials: user/pass
     
-# Applications
+## Applications
 
-## Debug
+### Debug
 
  - [Debug app in PCF](https://discuss.pivotal.io/hc/en-us/articles/221317307-How-to-remotely-debug-Java-applications-on-PCF-)
 
@@ -33,23 +35,46 @@
 3. Remote debug to _localhost_ at _8000_
 
 
-## Push app to PCF
+### Push app to PCF
 
     cf push --hostname <app-name>
     
 
-# Service Gateway
+## Service Gateway
 
   - https://content.pivotal.io/blog/creating-a-service-gateway-in-cloud-foundry-part-1
   - https://content.pivotal.io/blog/creating-a-service-gateway-in-cloud-foundry-part-2
 
-# Route service
+## Route service
     
   - http://docs.pivotal.io/pivotalcf/1-9/services/route-services.html
   - https://docs.pivotal.io/pivotalcf/1-7/devguide/services/route-binding.html
+
     
-    
-# Useful links
+## Database service
+
+> https://docs.pivotal.io/pcf-dev/dev-services.html
+
+Lookup marketplace
+
+    cf marketplace
+
+Create service instance
+
+    cf create-service p-mysql 512mb portal_mysql
+
+## Service Brokers 
+
+https://docs.cloudfoundry.org/services/api.html
+[Managing Service Brokers](https://docs.cloudfoundry.org/services/managing-service-brokers.html)
+
+
+> The service broker is the component of the service that implements the Service Broker API, 
+  for which a platform’s marketplace is a client. Service brokers are responsible for advertising 
+  a catalog of service offerings and service plans to the marketplace, and acting on requests 
+  from the marketplace for provisioning, binding, unbinding, and deprovisioning.
+
+## Useful links
 
   - [Manifest.yml](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html)
   - https://docs.cloudfoundry.org/buildpacks/java/java-tips.html#servlet-gradle/ 
