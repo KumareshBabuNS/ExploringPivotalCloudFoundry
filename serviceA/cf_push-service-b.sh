@@ -2,5 +2,5 @@
 
 ../gradlew build
 
-echo "Push service A as service B"
+echo "Push application A as service B"
 cf push --hostname service-b -f ./manifest-service-b.yml

@@ -3,4 +3,4 @@
 ../gradlew build
 
 echo "Push application A"
-cf push --hostname service-a
+cf push --hostname app-b

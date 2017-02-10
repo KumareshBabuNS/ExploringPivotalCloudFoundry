@@ -1,0 +1,13 @@
+registry:
+  instance:
+    appname: app-b
+    preferIpAddress: false
+    hostname: app-b.local.pcfdev.io
+    nonSecurePort: 80
+    leaseRenewalIntervalInSeconds: 5
+  client:
+    serviceUrl: defaultZone=${vcap.services.registry-service.credentials.uri:localhost}/eureka/
+
+management:
+  security:
+    enabled: false

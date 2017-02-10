@@ -1,5 +1,5 @@
 rootProject.name = 'ExploringPivotalCloudFoundry'
-include 'serviceA'
+include 'serviceA', 'app-b'
 include 'route-service'
 
 include 'gateway-app', 'gateway-route-service'

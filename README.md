@@ -2,7 +2,9 @@
 
   - [Pivotal Cloud Foundry](https://pivotal.io/platform) 
   - [Pivotal Cloud Foundry Documentation](https://docs.pivotal.io/pivotalcf/1-9/installing/pcf-docs.html) 
-  - [Cloud Foundry](https://docs.cloudfoundry.org/)
+  - [Pivotal Platform](https://pivotal.io/platform)
+  - [Pivotal Network](https://network.pivotal.io)
+  - [Cloud Foundry](https://docs.cloudfoundry.org)
 
 
 
@@ -62,6 +64,10 @@ Lookup marketplace
 Create service instance
 
     cf create-service p-mysql 512mb portal_mysql
+
+## Service Registry
+ 
+  https://network.pivotal.io/products/p-spring-cloud-services
 
 ## Service Brokers 
 

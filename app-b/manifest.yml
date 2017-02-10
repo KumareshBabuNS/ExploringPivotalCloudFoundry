@@ -1,0 +1,13 @@
+---
+applications:
+- name: app-b
+  memory: 512M
+  random-route: true
+  path: build/libs/app-b.war
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+env:
+ JBP_CONFIG_DEBUG: '{enabled: true}'
+ SIG_SECRET_KEY: JWTSecretKeyDontUseInProduction!
+services:
+ - registry-service
+ - my-rabbit
